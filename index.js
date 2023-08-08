@@ -25,13 +25,13 @@ const displayEntries = () => {
   })
   .join("\n");
 
-  const table = '<table class="table-auto w-full"><tr>
+  const table = `<table class="table-auto w-full"><tr>
   <th class="px-4 py-2">Name</th>
   <th class="px-4 py-2">Email</th>
   <th class="px-4 py-2">password</th>
   <th class="px-4 py-2">dob</th>
   <th class="px-4 py-2">accepted terms</th> 
-    </tr>${tableEntries} </table>';
+    </tr>${tableEntries} </table>`;
      
 let details = document.getElementById("user-entries");
   details.innerHTML = table;
@@ -46,12 +46,12 @@ const saveUserFrom = (event) => {
   const dob = documet.getElementById("dob").value);
   const acceptedTerms = documet.getElementById("acceptTerms").checked;
   const entry = {
-    name,
-    email,
-    password,
-    dob,
-    acceptTerms
-  };
+    name: name,
+    email: email,
+    password: password,
+    dob: dob,
+    acceptedTerms: acceptedTerms
+  }
 
   
   userEntries.push(entry);
