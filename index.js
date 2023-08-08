@@ -15,7 +15,7 @@ const displayEntries = () => {
      const entries = retrieveEntries();
    
   const tableEntries = entries.map((entry) => {
-    const name = '<td class='border px-4 py-2'>${entry.name}</td>';
+    const namecell = '<td class='border px-4 py-2'>${entry.name}</td>';
     const emailCell = '<td class='border px-4 py-2'>${entry.email}</td>';
     const passwordCell = '<td class='border px-4 py-2'>${entry.password}</td>';
     const dobCell = '<td class='border px-4 py-2'>${entry.dob}</td>';
@@ -31,7 +31,7 @@ const displayEntries = () => {
   <th class="px-4 py-2">password</th>
   <th class="px-4 py-2">dob</th>
   <th class="px-4 py-2">accepted terms</th> 
-    </tr>${tableEntries} </table>`;
+    </tr>${tableEntries} </table>';
      
 let details = document.getElementById("user-entries");
   details.innerHTML = table;
@@ -40,8 +40,8 @@ let details = document.getElementById("user-entries");
 const saveUserFrom = (event) => {
   event.prevenDefault();
   // Get form values
-  const name = documet.getElementById("name").value;
-  const email =  documet.getElementById("email").value;
+  const name = documnet.getElementById("name").value;
+  const email =  documnet.getElementById("email").value;
   const passsword = documet.getElementById("password").value;
   const dob = documet.getElementById("dob").value);
   const acceptedTerms = documet.getElementById("acceptTerms").checked;
